@@ -6,19 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tug of Words - Main Page</title>
+    <script>
+        function newGame() {
+            window.location.href="../html/gamePage.html"
+        }
+    </script>
 </head>
 <body>
-    <h1>Tug of Words!</h1>
-    <h2>Enter player names below</h2>
-    <form playerNames>
-        <label for="player1">Player 1:</label>
-        <input type="text" id="player1" class="player1">
 
-        <label for="player2">Player 2:</label>
-        <input type="text" id="player2" class="player2">
-    </form>
-    <button id="start" class="start">Start New Game</button>
-</footer>
+    <h3>Welcome to...</h3>
+    <h1>
+        TUG OF WORDS!
+    </h1>
+
+    <P>
+        ToW is a word scramble game where 2 players take turns solving scrambled words.
+        The score is represented by a tug of war game. Each correct answer moves the
+        flag closer to your side. The first player to get the flag to their side is the winner. If the game timer runs out before then, whoever has the flag closer to their side is the winner.
+    </P>
+    
+    <button onclick="newGame()" id="start" class="start">Start New Game</button>
+</footer>   
     <!-- ADD IMG FOR BOTTOM OF SCREEN -->
 <footer>
     <!-- <div style="width:100%;height:0;padding-bottom:55%;position:relative;"><iframe src="https://giphy.com/embed/CHpCVNxcbzUrZ6sYpL" width="30%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Biteable-argument-conflict-tug-of-war-CHpCVNxcbzUrZ6sYpL">via GIPHY</a></p>  -->

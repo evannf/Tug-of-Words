@@ -1,6 +1,2 @@
-// alert("Welcome to Tug of Words, the word scramble tug of war game" )
-// class Player {
-//     constructor{
-//         this.name = 
-//     }
-// }
+// const startGame = document.querySelector(".start");
+// startGame.addEventListener("click", function())
