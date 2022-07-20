@@ -67,7 +67,8 @@ function scrambleWord() {
 //checkAnswer function isn't grabbing the correct varible for comparrison
 function checkAnswer() {
     if (answer.value == word){
-        console.log("correct")
+        console.log("correct");
+        flag.setAttribute("style","left: 100px")
     } else {
         console.log("incorrect")
     };
@@ -79,4 +80,4 @@ console.log(word)
 
 scrambledWord.innerHTML = scrambleWord()
 submitButton.addEventListener("click", checkAnswer);
-// newWord.addEventListener("click", scrambleWord())
+// newWord.addEventListener("click", scrambleWord()

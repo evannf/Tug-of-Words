@@ -14,20 +14,19 @@ body{
     padding: 50px;
     margin: 20px;
 }
-
 .tugOfWar{
     display: flex;
-    
 }
 .rope{
     flex-direction: row;
     max-width: 100%;
     height: auto;
-    position: relative;
-    right: 60px;
 }
 .flag{
     position: absolute;
+    left: 600px;
+    justify-content: center;
+    align-items: center;
 }
 .scrambled-word{
     font-size: 48px;
