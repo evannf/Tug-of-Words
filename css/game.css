@@ -31,3 +31,6 @@ body{
 .scrambled-word{
     font-size: 48px;
 }
+.moved{
+    transform: translate(100px);
+}

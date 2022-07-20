@@ -1,6 +1,6 @@
 const answer = document.querySelector(".answer");
 const submitButton = document.querySelector(".submit");
-// const newWord = document.querySelector(".new-word");
+const newWordButton = document.querySelector(".new-word");
 const scrambledWord = document.querySelector(".scrambled-word");
 const gameContainer = document.querySelector(".game-container");
 const flag = document.querySelector(".flag");
@@ -41,14 +41,17 @@ const words = [
     "jumped",
     "kindle",
     "lemon",
-    "merciful"
+    "merciful",
 ]
 
-
-// function randomWord() {
-   
-// }
 let word = words[Math.floor(Math.random() * words.length + 1)];
+
+function newWord() {
+    word = words[Math.floor(Math.random() * words.length + 1)];
+    answer.innerHTML = "";
+    scrambledWord.innerHTML = scrambleWord();
+
+}
 
 function scrambleWord() {
     let letters = word.split("");
@@ -67,17 +70,20 @@ function scrambleWord() {
 //checkAnswer function isn't grabbing the correct varible for comparrison
 function checkAnswer() {
     if (answer.value == word){
-        console.log("correct");
-        flag.setAttribute("style","left: 100px")
+        flag.classList.add("moved");
+        newWord();
     } else {
+        newWord();
+        alert("Answer incorrect, your grip slipped!");
+        
         console.log("incorrect")
     };
 }
-
+newWord();
 console.log(word)
 
 
 
 scrambledWord.innerHTML = scrambleWord()
 submitButton.addEventListener("click", checkAnswer);
-// newWord.addEventListener("click", scrambleWord()
+newWordButton.addEventListener("click", newWord)
