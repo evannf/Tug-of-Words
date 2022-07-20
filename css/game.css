@@ -23,8 +23,8 @@ body{
     flex-direction: row;
     max-width: 100%;
     height: auto;
-    /* position: relative;
-    right: 60px; */
+    position: relative;
+    right: 60px;
 }
 .flag{
     position: absolute;

@@ -1,5 +1,6 @@
 const answer = document.querySelector(".answer");
 const submitButton = document.querySelector(".submit");
+// const newWord = document.querySelector(".new-word");
 const scrambledWord = document.querySelector(".scrambled-word");
 const gameContainer = document.querySelector(".game-container");
 const flag = document.querySelector(".flag");
@@ -62,4 +63,20 @@ function scrambleWord() {
         }
         return letters.join("");
     }
+
+//checkAnswer function isn't grabbing the correct varible for comparrison
+function checkAnswer() {
+    if (answer.value == word){
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    };
+}
+
+console.log(word)
+
+
+
 scrambledWord.innerHTML = scrambleWord()
+submitButton.addEventListener("click", checkAnswer);
+// newWord.addEventListener("click", scrambleWord())
