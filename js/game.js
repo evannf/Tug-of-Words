@@ -1,117 +1,65 @@
-class Player1{
-    constructor(){
-        this.name = prompt("Player 1 name:")
-    }
-}
-
-class Player2{
-    constructor(){
-        this.name = prompt("Player 2 name:")
-    }
-    //inherit class Player1 and change name value
-}
-
+const answer = document.querySelector(".answer");
+const submitButton = document.querySelector(".submit");
+const scrambledWord = document.querySelector(".scrambled-word");
+const gameContainer = document.querySelector(".game-container");
+const flag = document.querySelector(".flag");
 
 const words = [
-    {
-        word: "obnca",
-        correctAnswer: "bacon"
-    },
-    {
-        word: "palep",
-        correctAnswer: "apple"
-    },
-    {
-        word: "rownc",
-        correctAnswer: "crown"
-    },
-    {
-        word: "dorang",
-        correctAnswer: "dragon"
-    },
-    {
-        word: "telapehn",
-        correctAnswer: "elephant"
-    },
-    {
-        word: "wololf",
-        correctAnswer: "follow"
-    },
-    {
-        word: "eargnel",
-        correctAnswer: "general"
-    },
-    {
-        word: "inalhiner",
-        correctAnswer: "hairline"
-    },
-    {
-        word: "nastint",
-        correctAnswer: "instant"
-    },
-    {
-        word: "icetusj",
-        correctAnswer: "justice"
-    },
-    {
-        word: "idgnokm",
-        correctAnswer: "kingdom"
-    },
-    {
-        word: "onesls",
-        correctAnswer: "lesson"
-    },
-    {
-        word: "egenltc",
-        correctAnswer: "neglect"
-    },
-    {
-        word: "geonar",
-        correctAnswer: "orange"
-    },
-    {
-        word: "apetcharu",
-        correctAnswer: "parachute"
-    },
-    {
-        word: "rizedlae",
-        correctAnswer: "realized"
-    },
-    {
-        word: "implse",
-        correctAnswer: "simple"
-    },
-    {
-        word: "hertegot",
-        correctAnswer: "together"
-    },
-    {
-        word: "sluvarine",
-        correctAnswer: "universal"
-    },
-    {
-        word: "daveynir",
-        correctAnswer: "vineyard"
-    },
-    {
-        word: "arorwir",
-        correctAnswer: "warrior"
-    },
-    {
-        word: "ginlouygn",
-        correctAnswer: "youngling"
-    },
-    {
-        word: "lelfpuh",
-        correctAnswer: "helpful"
-    },
-    {
-        word: "loidbel",
-        correctAnswer: "boiled"
-    },
-    {
-        word: "anchomelly",
-        correctAnswer: "melancholly"
-    }
-
+    "bacon",
+    "apple",
+    "crystal",
+    "dragon",
+    "energize",
+    "friendly",
+    "gentle",
+    "highly",
+    "insnane",
+    "joking",
+    "kingdom",
+    "landslide",
+    "monkey",
+    "needle",
+    "octopus",
+    "pregnant",
+    "reserved",
+    "symbolic",
+    "together",
+    "violent",
+    "windy",
+    "android",
+    "battle",
+    "cleanly",
+    "drained",
+    "enter",
+    "forgotten",
+    "green",
+    "header",
+    "jeans",
+    "hiccup",
+    "insane",
+    "jumped",
+    "kindle",
+    "lemon",
+    "merciful"
 ]
+
+function randomWord() {
+    let word = words[Math.floor(Math.random() * words.length + 1)];
+    return word;
+}
+
+function scrambleWord(word) {
+    let letters = word.split("");
+    let i = letters.length, temporaryValue, randomIndex;
+
+    while (0 !== i){
+        randomIndex = Math.floor(Math.random() * i);
+        i -= 1;
+        temporaryValue = letters[i];
+        letters[i] = letters[randomIndex];
+        letters[randomIndex] = temporaryValue;
+        }
+        return letters.join("");
+    }
+console.log(randomWord())
+console.log(scrambleWord("android"))
