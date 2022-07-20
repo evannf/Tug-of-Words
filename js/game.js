@@ -43,12 +43,13 @@ const words = [
     "merciful"
 ]
 
-function randomWord() {
-    let word = words[Math.floor(Math.random() * words.length + 1)];
-    return word;
-}
 
-function scrambleWord(word) {
+// function randomWord() {
+   
+// }
+let word = words[Math.floor(Math.random() * words.length + 1)];
+
+function scrambleWord() {
     let letters = word.split("");
     let i = letters.length, temporaryValue, randomIndex;
 
@@ -61,5 +62,4 @@ function scrambleWord(word) {
         }
         return letters.join("");
     }
-console.log(randomWord())
-console.log(scrambleWord("android"))
+scrambledWord.innerHTML = scrambleWord()
