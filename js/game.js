@@ -4,6 +4,7 @@ const newWordButton = document.querySelector(".new-word");
 const scrambledWord = document.querySelector(".scrambled-word");
 const gameContainer = document.querySelector(".game-container");
 const flag = document.querySelector(".flag");
+// const player = document.querySelector(".player");
 
 const words = [
     "bacon",
@@ -44,6 +45,13 @@ const words = [
     "merciful",
 ]
 
+function playerTurn(){
+    const player = document.querySelector("#player");
+    const player2 = document.querySelector("#player2");
+    player.classList.toggle("hidden");
+    player2.classList.toggle("hidden");
+}
+
 let word = words[Math.floor(Math.random() * words.length + 1)];
 
 function newWord() {
@@ -74,6 +82,7 @@ function checkAnswer() {
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
         endGame();
         newWord();
+        playerTurn();
 
         //SANITY CHECK
         // console.log("correct");
@@ -83,6 +92,7 @@ function checkAnswer() {
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
         endGame();
         newWord();
+        playerTurn();
         alert("Answer incorrect, your grip slipped!");
 
         //SANITY CHECK

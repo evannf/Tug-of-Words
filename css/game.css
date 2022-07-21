@@ -31,3 +31,6 @@ body{
 .scrambled-word{
     font-size: 48px;
 }
+.hidden{
+    display: none;
+}
