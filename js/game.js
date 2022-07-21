@@ -68,22 +68,40 @@ function scrambleWord() {
     }
 
 let translateBy = 0;
-
 function checkAnswer() {
     if (answer.value == word){
-        // flag.classList.add("moved");
-        translateBy = translateBy + 100;
+        translateBy = translateBy + 300;
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
+        endGame();
         newWord();
+
+        //SANITY CHECK
+        // console.log("correct");
+        // console.log(translateBy);
     } else {
-        translateBy = translateBy - 100;
+        translateBy = translateBy - 300;
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
-        newWord()
+        endGame();
+        newWord();
         alert("Answer incorrect, your grip slipped!");
-        
-        console.log("incorrect")
+
+        //SANITY CHECK
+        // console.log(translateBy);
+        // console.log("incorrect");
     };
 }
+function endGame() {
+    if (translateBy >= 900){
+        alert("Game over, player 2 wins!");
+        window.location.href="../html/endPage.html";
+    } else if (translateBy <= -900){
+        alert("Game over, player 1 wins!");
+        window.location.href="../html/endPage.html";
+    }    
+}
+
+
+
 newWord();
 console.log(word)
 
