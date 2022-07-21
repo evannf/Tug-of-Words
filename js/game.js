@@ -48,7 +48,7 @@ let word = words[Math.floor(Math.random() * words.length + 1)];
 
 function newWord() {
     word = words[Math.floor(Math.random() * words.length + 1)];
-    answer.innerHTML = "";
+    answer.value = "";
     scrambledWord.innerHTML = scrambleWord();
 
 }
@@ -67,13 +67,18 @@ function scrambleWord() {
         return letters.join("");
     }
 
-//checkAnswer function isn't grabbing the correct varible for comparrison
+let translateBy = 0;
+
 function checkAnswer() {
     if (answer.value == word){
-        flag.classList.add("moved");
+        // flag.classList.add("moved");
+        translateBy = translateBy + 100;
+        document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
         newWord();
     } else {
-        newWord();
+        translateBy = translateBy - 100;
+        document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
+        newWord()
         alert("Answer incorrect, your grip slipped!");
         
         console.log("incorrect")
