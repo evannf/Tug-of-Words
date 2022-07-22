@@ -4,7 +4,6 @@ const newWordButton = document.querySelector(".new-word");
 const scrambledWord = document.querySelector(".scrambled-word");
 const gameContainer = document.querySelector(".game-container");
 const flag = document.querySelector(".flag");
-// const player = document.querySelector(".player");
 
 const words = [
     "bacon",
@@ -61,7 +60,6 @@ function newWord() {
     word = words[Math.floor(Math.random() * words.length + 1)];
     answer.value = "";
     scrambledWord.innerHTML = scrambleWord();
-
 }
 
 function scrambleWord() {
@@ -92,7 +90,7 @@ function checkAnswer() {
         // console.log("correct");
         // console.log(translateBy);
     } else {
-        translateBy = translateBy + 200;
+        translateBy = translateBy + 350;
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
         endGame();
         newWord();
@@ -106,10 +104,8 @@ function checkAnswer() {
 }
 function endGame() {
     if (translateBy >= 1000){
-        alert("Game over, the machine has won!");
         window.location.href="../html/endPage2.html";
     } else if (translateBy <= -1000){
-        alert("Game over, the players have won!");
         window.location.href="../html/endPage1.html";
     }    
 }
