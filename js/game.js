@@ -9,40 +9,43 @@ const flag = document.querySelector(".flag");
 const words = [
     "bacon",
     "apple",
-    "crystal",
+    "jungle",
     "dragon",
-    "energize",
-    "friendly",
+    "energy",
+    "friend",
     "gentle",
     "highly",
-    "insnane",
+    "gin",
     "joking",
     "kingdom",
-    "landslide",
+    "land",
     "monkey",
     "needle",
     "octopus",
-    "pregnant",
-    "reserved",
-    "symbolic",
-    "together",
+    "pearl",
+    "ready",
+    "symbol",
+    "gather",
     "violent",
     "windy",
-    "android",
+    "grain",
     "battle",
-    "cleanly",
-    "drained",
+    "clean",
+    "drain",
     "enter",
-    "forgotten",
+    "forget",
     "green",
-    "header",
-    "jeans",
+    "head",
+    "pants",
     "hiccup",
-    "insane",
-    "jumped",
-    "kindle",
+    "pink",
+    "jump",
+    "link",
     "lemon",
-    "merciful",
+    "mercy",
+    "brat",
+    "hurt",
+    "spin"
 ]
 
 function playerTurn(){
@@ -78,17 +81,18 @@ function scrambleWord() {
 let translateBy = 0;
 function checkAnswer() {
     if (answer.value == word){
-        translateBy = translateBy + 300;
+        translateBy = translateBy - 200;
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
         endGame();
         newWord();
         playerTurn();
+        alert("Answer correct, you give a mighty heave!")
 
         //SANITY CHECK
         // console.log("correct");
         // console.log(translateBy);
     } else {
-        translateBy = translateBy - 300;
+        translateBy = translateBy + 200;
         document.getElementById("flag").style.transform = `translate(${translateBy}px)`;
         endGame();
         newWord();
@@ -101,12 +105,12 @@ function checkAnswer() {
     };
 }
 function endGame() {
-    if (translateBy >= 900){
-        alert("Game over, player 2 wins!");
-        window.location.href="../html/endPage.html";
-    } else if (translateBy <= -900){
-        alert("Game over, player 1 wins!");
-        window.location.href="../html/endPage.html";
+    if (translateBy >= 1000){
+        alert("Game over, the machine has won!");
+        window.location.href="../html/endPage2.html";
+    } else if (translateBy <= -1000){
+        alert("Game over, the players have won!");
+        window.location.href="../html/endPage1.html";
     }    
 }
 
