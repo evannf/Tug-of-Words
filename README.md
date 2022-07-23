@@ -9,6 +9,7 @@ Tug of Words is a word scramble game where 2 players try to use their wits to be
 -If the players lose to the machine, load the machine winner screen.<br>
 
 This project was built using equal parts HTML and JavaScript, and stylized with CSS.
+The game is published at https://evannf.github.io/Tug-of-Words/
 
 Original 2 wireframes (original idea was player vs player)
 ![Tow-wireframe1](https://user-images.githubusercontent.com/105689542/180606708-733695f9-0f37-45e6-823a-ddc264afa66c.jpg)
