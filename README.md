@@ -11,9 +11,10 @@ Tug of Words is a word scramble game where 2 players try to use their wits to be
 This project was built using equal parts HTML and JavaScript, and stylized with CSS.
 
 Original 2 wireframes (original idea was player vs player)
-![Tow-wireframe1](https://user-images.githubusercontent.com/105689542/180606467-5c184009-caf1-4289-ba0a-9ff895fd705b.jpg)
+![Tow-wireframe1](https://user-images.githubusercontent.com/105689542/180606708-733695f9-0f37-45e6-823a-ddc264afa66c.jpg)
+![ToW-wireframe2](https://user-images.githubusercontent.com/105689542/180606717-f14468c9-bf1c-41a7-a891-0073dbec10f0.jpg)
 
-![ToW-wireframe2](https://user-images.githubusercontent.com/105689542/180606486-a824926a-acf2-4f53-a355-2ae885078e15.jpg)
+
 
 Revised wirefame for co-op play
 ![ToW-wireframe3](https://user-images.githubusercontent.com/105689542/180606588-d795ca84-7a74-438e-996b-423ef14aa59c.jpg)
