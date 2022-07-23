@@ -1,7 +1,7 @@
 # Tug-of-Words
 Tug of Words is a word scramble game where 2 players try to use their wits to beat an evil machine in tug of war. Each player takes turns solving a scrabmled word. A correct answer pulls the rop closer to the player side, while an incorrect answer moves it towards the machine. The game ends when the flag in the center of the rope gets pulled off-screen in either direction.
 
--When players click "start game", the game page should load.
+-When players click "start game", the game page should load.<br>
 -When players enter the correct answer, the flag is pulled left.
 -When players enter the incorrect answer, the flag is pulled right.
 -When a player clicks the "new word" button, a new scrambled word appears.
