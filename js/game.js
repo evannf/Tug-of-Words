@@ -104,9 +104,9 @@ function checkAnswer() {
 }
 function endGame() {
     if (translateBy >= 1000){
-        window.location.href="../html/endPage2.html";
+        window.location.href="../endPage2.html";
     } else if (translateBy <= -1000){
-        window.location.href="../html/endPage1.html";
+        window.location.href="../endPage1.html";
     }    
 }
 
