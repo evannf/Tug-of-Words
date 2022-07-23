@@ -2,11 +2,11 @@
 Tug of Words is a word scramble game where 2 players try to use their wits to beat an evil machine in tug of war. Each player takes turns solving a scrabmled word. A correct answer pulls the rop closer to the player side, while an incorrect answer moves it towards the machine. The game ends when the flag in the center of the rope gets pulled off-screen in either direction.
 
 -When players click "start game", the game page should load.<br>
--When players enter the correct answer, the flag is pulled left.
--When players enter the incorrect answer, the flag is pulled right.
--When a player clicks the "new word" button, a new scrambled word appears.
--If the players get the flag to their side, load the player winner screen.
--If the players lose to the machine, load the machine winner screen.
+-When players enter the correct answer, the flag is pulled left.<br>
+-When players enter the incorrect answer, the flag is pulled right.<br>
+-When a player clicks the "new word" button, a new scrambled word appears.<br>
+-If the players get the flag to their side, load the player winner screen.<br>
+-If the players lose to the machine, load the machine winner screen.<br>
 
 This project was built using equal parts HTML and JavaScript, and stylized with CSS.
 
