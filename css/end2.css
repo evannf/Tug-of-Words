@@ -7,3 +7,9 @@ body{
     padding: 100px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+

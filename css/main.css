@@ -4,9 +4,15 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 100px;
+    margin: 20%;
 }
 
 h3{
     text-align: center;
 }
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+
